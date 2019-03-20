@@ -22,7 +22,7 @@ $(function(){
       </li>`);
   });
 
-//toggle strike through on item
+//toggle strike through on item when checked/unchecked
 $('.shopping-list').on('click', '.shopping-item-toggle',
   function(event) {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
