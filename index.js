@@ -1,4 +1,4 @@
-$(function(){
+$(function listApp(){
 //adding items via form  
   $('#js-shopping-list-form').submit(function(event) {
 //stop default form action    
@@ -22,12 +22,12 @@ $(function(){
   });
 //toggle strike through on item when checked/unchecked
 $('.shopping-list').on('click', '.shopping-item-toggle',
-  function(event) {
+  function toggleCheckedItems(event) {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
 //delete item from list
 $('.shopping-list').on('click', '.shopping-item-delete',
-  function(event) {
+  function removeItems(event) {
     $(this).closest('li').remove();
   });
 });
