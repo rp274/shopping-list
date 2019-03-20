@@ -3,7 +3,6 @@ $(function(){
   $('#js-shopping-list-form').submit(function(event) {
 //stop default form action    
     event.preventDefault();
-
     const listItem = $('.js-shopping-list-entry').val();
 //clear form input
     $('.js-shopping-list-entry').val('');
@@ -21,19 +20,14 @@ $(function(){
         </div>
       </li>`);
   });
-
 //toggle strike through on item when checked/unchecked
 $('.shopping-list').on('click', '.shopping-item-toggle',
   function(event) {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
-
 //delete item from list
 $('.shopping-list').on('click', '.shopping-item-delete',
   function(event) {
     $(this).closest('li').remove();
   });
-
-
-
 });
